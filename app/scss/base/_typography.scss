@@ -1,0 +1,9 @@
+@use "../utils/index";
+
+header h3{
+    margin-top: 10px;
+    background-color: ivory;
+    padding: 10px 15px;
+    color: index.$header-subTitleColor;
+    border-radius: 6px;
+}

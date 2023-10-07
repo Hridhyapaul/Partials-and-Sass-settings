@@ -1,0 +1,15 @@
+@forward "./base/index";
+@use "./utils/index" as variable;
+
+// We can use any word instead of index like (variable)
+header{
+    background-color: variable.$header_bgColor;
+    padding: 1rem;
+    color: variable.$text_color;
+}
+
+main{
+    background-color: variable.$main_bgColor;
+    padding: 1rem;
+    color: variable.$text_color;
+}
