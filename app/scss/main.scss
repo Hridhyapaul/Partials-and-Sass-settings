@@ -2,14 +2,28 @@
 @use "./utils/index" as variable;
 
 // We can use any word instead of index like (variable)
-header{
-    background-color: variable.$header_bgColor;
-    padding: 1rem;
-    color: variable.$text_color;
+header {
+  background-color: variable.$header_bgColor;
+  padding: 1rem;
+  color: variable.$text_color;
 }
 
-main{
-    background-color: variable.$main_bgColor;
-    padding: 1rem;
-    color: variable.$text_color;
+main {
+  background-color: variable.$main_bgColor;
+  padding: 1rem;
+  color: variable.$text_color;
+}
+
+@mixin para-style {
+  font-size: 16px;
+  text-align: left;
+  margin: 10px 0;
+  background-color: variable.$text_color;
+  color: variable.$main_bgColor;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+#about p {
+    @include para-style;
 }
