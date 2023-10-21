@@ -14,16 +14,20 @@ main {
   color: variable.$text_color;
 }
 
-@mixin para-style {
+@mixin para-style ($margin, $bg_Color, $color) {
   font-size: 16px;
   text-align: left;
-  margin: 10px 0;
-  background-color: variable.$text_color;
-  color: variable.$main_bgColor;
+  margin-top: $margin;
+  background-color: $bg_Color;
+  color: $color;
   padding: 10px 15px;
   border-radius: 10px;
 }
 
 #about p {
-    @include para-style;
+    @include para-style(10px, variable.$text_color, variable.$main_bgColor);
+}
+
+#education p {
+    @include para-style(2px, variable.$header_bgColor, variable.$text_color);
 }
